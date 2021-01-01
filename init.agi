@@ -1,0 +1,22 @@
+/*
+	Basic Template Module Registration Information
+	
+	This is a script for registering this module to the ArozOS core system.
+	Do not try to call any AGI users / filepath functions in this script.
+*/
+
+
+//Define the launchInfo for the module
+var moduleLaunchInfo = {
+    Name: "BasicTemplate",							//Name of the module
+	Group: "Development",							//The type of the module
+	IconPath: "BasicTemplate/img/small_icon.png",	//The small_icon for the module.
+	Version: "1.0",									//The version of the module
+	StartDir: "BasicTemplate/index.html",			//The starting path for this module
+	SupportFW: true,								//State if this module support FloatWindow mode
+	LaunchFWDir: "BasicTemplate/index.html",		//The directory of the floatWindow launch index
+	InitFWSize: [475, 700]							//floatWindow size
+}
+
+//Register the module
+registerModule(JSON.stringify(moduleLaunchInfo));	//Register the module to the core system
